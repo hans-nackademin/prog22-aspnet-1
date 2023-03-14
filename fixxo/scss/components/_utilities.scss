@@ -6,3 +6,47 @@ html, body {
 .hide {
     display: none;
 }
+
+.links {
+    @include lg {
+        @include center-content;
+    }
+
+    .link {            
+        color: $color-dark-2;
+        font-weight: $font-weight-medium;
+        text-decoration: none;
+        margin: 10px 12px;
+        display: block;
+
+        &:hover,
+        &.active {
+            color: $color-theme;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.icons {
+
+
+    .link {
+        position: relative;
+        height: 36px;
+        width: 36px;
+        @include center-content;
+        box-shadow: 0 0 5px 2px $color-shadow-1;
+        border-radius: 50%;
+        margin: 5px;
+        text-decoration: none;
+        @include color-default;
+        transition: background-color 0.25s, color 0.20s;
+
+        &:hover,
+        &.active{
+            @include color-dark-default;
+            text-decoration: none;
+        }
+    }
+}
