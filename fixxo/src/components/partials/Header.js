@@ -26,7 +26,6 @@ const Header = () => {
             <div id="toggle-icon" className="icons">
                 <button className="link"><i className="fa-regular fa-bars"></i></button>
             </div>
-
         </div>
     </header>
   )
