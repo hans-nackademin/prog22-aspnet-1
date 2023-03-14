@@ -8,7 +8,7 @@ const Header = () => {
             <Link className="logotype" to="/">Fixxo.</Link>
             
             <div id="menu">
-                <nav className="menu-links">
+                <nav className="menu-links links">
                     <NavLink className="link" to="/">Home</NavLink>
                     <NavLink className="link" to="/products">Products</NavLink>
                     <NavLink className="link" to="/contacts">Contacts</NavLink>
