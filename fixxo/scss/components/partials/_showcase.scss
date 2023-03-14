@@ -1,4 +1,44 @@
 .showcase {
     background-color: $color-light-3;
     background: linear-gradient(90deg, $color-light-3 0%, $color-light-2 100%);
+
+    .container {
+        @include center-content;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @include xl {
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .content {
+        text-align: center;
+
+        @include xl {
+            text-align: left;
+        }
+
+        .title-1 {
+            @include font-title-1;
+        }
+        .title-2 {
+            @include font-title-2;
+        }
+        .title-3 {
+            @include font-title-3;
+        }
+    }
+
+    img {
+        display: none;
+        max-height: 745px;
+        width: auto;
+
+        @include xl {
+            display: block;
+        }
+    }
 }

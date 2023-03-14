@@ -1,0 +1,39 @@
+button {
+    border: none;
+}
+
+.btn-theme {
+    position: relative;
+    @include color-theme-default;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: background-color 0.25s;
+
+    &::before {
+        content: '';
+        border-top: 2px solid $color-light-2;
+        border-left: 2px solid $color-light-2;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+    &::after {
+        content: '';
+        border-bottom: 2px solid $color-light-2;
+        border-right: 2px solid $color-light-2;
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    &:hover {
+        @include color-dark-default;
+        text-decoration: none;
+    }
+}
