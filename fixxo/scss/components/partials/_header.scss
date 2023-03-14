@@ -15,29 +15,26 @@ header {
 
     #menu {
         grid-area: menu;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "menulinks"
-                             "menuicons";
 
         @include lg {
+            display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "menulinks menuicons";
         }
 
         .menu-links {
             grid-area: menulinks;
-            @include lg {
-                text-align: center;
-            }
+
         }
 
         .menu-icons {
             grid-area: menuicons;
-            text-align: center;
+            margin-top: 40px;
+
 
             @include lg {
                 text-align: right;
+                margin-top: 0;
             }
             
         }
@@ -46,8 +43,8 @@ header {
 
     #toggle-icon {
         grid-area: toggleicon;
-        display: block;
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
 
         @include lg {
             display: none;
@@ -69,13 +66,16 @@ header {
     }
 
     .links {
-        @include center-content;
+        @include lg {
+            @include center-content;
+        }
 
-        .link {
+        .link {            
             color: $color-dark-2;
             font-weight: $font-weight-medium;
             text-decoration: none;
             margin: 10px 12px;
+            display: block;
 
             &:hover,
             &.active {
@@ -88,7 +88,6 @@ header {
 
     .icons {
         @include center-content;
-
         @include lg {
             justify-content: flex-end;
         }

@@ -2,3 +2,7 @@ html, body {
     @include font-default;
     @include color-default;
 }
+
+.hide {
+    display: none;
+}

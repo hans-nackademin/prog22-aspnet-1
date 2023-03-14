@@ -8,6 +8,10 @@ html, body {
   color: #222529;
 }
 
+.hide {
+  display: none;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -24,12 +28,10 @@ header #logotype {
 }
 header #menu {
   grid-area: menu;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "menulinks" "menuicons";
 }
 @media (min-width: 960px) {
   header #menu {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "menulinks menuicons";
   }
@@ -37,24 +39,20 @@ header #menu {
 header #menu .menu-links {
   grid-area: menulinks;
 }
-@media (min-width: 960px) {
-  header #menu .menu-links {
-    text-align: center;
-  }
-}
 header #menu .menu-icons {
   grid-area: menuicons;
-  text-align: center;
+  margin-top: 40px;
 }
 @media (min-width: 960px) {
   header #menu .menu-icons {
     text-align: right;
+    margin-top: 0;
   }
 }
 header #toggle-icon {
   grid-area: toggleicon;
-  display: block;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 @media (min-width: 960px) {
   header #toggle-icon {
@@ -74,16 +72,19 @@ header .container {
     grid-template-areas: "logotype menu menu";
   }
 }
-header .links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 960px) {
+  header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 header .links .link {
   color: #222529;
   font-weight: 500;
   text-decoration: none;
   margin: 10px 12px;
+  display: block;
 }
 header .links .link:hover, header .links .link.active {
   color: #ff7373;
@@ -118,4 +119,9 @@ header .icons .link:hover, header .icons .link.active {
   background-color: #222529;
   color: #f5f5f5;
   text-decoration: none;
+}
+
+.showcase {
+  background-color: #f3f3f3;
+  background: linear-gradient(90deg, #f3f3f3 0%, #f5f5f5 100%);
 }
