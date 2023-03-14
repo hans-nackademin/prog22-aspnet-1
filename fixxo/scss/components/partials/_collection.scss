@@ -1,0 +1,29 @@
+.collection-grid {
+    .container {
+
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        @include center-content;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .item-collection {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+
+        @include md {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include xxl {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}

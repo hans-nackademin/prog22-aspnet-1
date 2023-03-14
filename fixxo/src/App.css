@@ -69,7 +69,7 @@ header #logotype {
 header #menu {
   grid-area: menu;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header #menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,7 +83,7 @@ header #menu .menu-icons {
   grid-area: menuicons;
   margin-top: 40px;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header #menu .menu-icons {
     text-align: right;
     margin-top: 0;
@@ -94,7 +94,7 @@ header #toggle-icon {
   display: flex;
   justify-content: flex-end;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header #toggle-icon {
     display: none;
   }
@@ -106,13 +106,13 @@ header .container {
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "logotype toggleicon" "menu menu";
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header .container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "logotype menu menu";
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header .links {
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@ header .icons {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   header .icons {
     justify-content: flex-end;
   }
@@ -172,7 +172,7 @@ header .icons .link:hover, header .icons .link.active {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase .container {
     justify-content: space-between;
     padding-top: 0;
@@ -182,7 +182,7 @@ header .icons .link:hover, header .icons .link.active {
 .showcase .content {
   text-align: center;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase .content {
     text-align: left;
   }
@@ -194,12 +194,12 @@ header .icons .link:hover, header .icons .link.active {
   line-height: 1.5;
   margin-bottom: 0.6em;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .showcase .content .title-1 {
     font-size: 3em;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase .content .title-1 {
     font-size: 4.063em;
   }
@@ -211,12 +211,12 @@ header .icons .link:hover, header .icons .link.active {
   line-height: 1;
   margin-bottom: 0.6em;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .showcase .content .title-2 {
     font-size: 1.9em;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase .content .title-2 {
     font-size: 2.188em;
   }
@@ -228,12 +228,12 @@ header .icons .link:hover, header .icons .link.active {
   line-height: 1.5;
   margin-bottom: 1.5em;
 }
-@media (min-width: 960px) {
+@media (min-width: 992px) {
   .showcase .content .title-3 {
     font-size: 1.1em;
   }
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase .content .title-3 {
     font-size: 1.25em;
   }
@@ -243,8 +243,38 @@ header .icons .link:hover, header .icons .link.active {
   max-height: 745px;
   width: auto;
 }
-@media (min-width: 1140px) {
+@media (min-width: 1200px) {
   .showcase img {
     display: block;
+  }
+}
+
+.collection-grid .title {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.collection-grid .item-collection {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .collection-grid .item-collection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .collection-grid .item-collection {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .collection-grid .item-collection {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
