@@ -65,6 +65,7 @@ button {
   font-size: 1.2em;
   display: inline-block;
   transition: background-color 0.25s;
+  text-align: center;
 }
 .btn-theme::before {
   content: "";
@@ -292,4 +293,22 @@ header .icons .link {
 }
 .collection-grid .item-collection .item {
   border: 1px solid black;
+}
+.collection-grid .item-collection .item .image-section {
+  position: relative;
+}
+.collection-grid .item-collection .item .image-section img {
+  width: 100%;
+  height: auto;
+}
+.collection-grid .item-collection .item .image-section .menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
+}
+.collection-grid .item-collection .item .image-section .menu .btn-theme {
+  width: 100%;
 }

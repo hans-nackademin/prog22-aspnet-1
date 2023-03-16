@@ -28,6 +28,45 @@
 
         .item {
             border: 1px solid black;
+
+           .image-section {
+                position: relative; 
+
+                img {
+
+                    width: 100%;
+                    height: auto;
+                }
+
+                .menu {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid red;
+
+
+                    .icons {
+
+                        .link {}
+                    }
+
+                    .btn-theme {
+                        width: 100%;
+                    }
+                }
+           }
+
+           .body-section {
+                .category {}
+
+                .name {}
+                
+                .star-rating {}
+                
+                .price{} 
+           }
         }
     }
 }

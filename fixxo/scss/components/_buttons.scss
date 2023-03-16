@@ -10,6 +10,7 @@ button {
     font-size: 1.2em;
     display: inline-block;
     transition: background-color 0.25s;
+    text-align: center;
 
     &::before {
         content: '';
