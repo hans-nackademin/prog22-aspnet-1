@@ -52,6 +52,11 @@ html, body {
   text-decoration: none;
 }
 
+.star-rating {
+  color: #ff7373;
+  font-size: 1.375em;
+}
+
 button {
   border: none;
 }
@@ -309,6 +314,22 @@ header .icons .link {
   width: 100%;
   border: 1px solid red;
 }
+.collection-grid .item-collection .item .image-section .menu .icons {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.collection-grid .item-collection .item .image-section .menu .icons .link {
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+  font-size: 1.4em;
+}
 .collection-grid .item-collection .item .image-section .menu .btn-theme {
+  position: absolute;
   width: 100%;
+  bottom: 0;
+}
+.collection-grid .item-collection .item .body-section .star-rating {
+  text-align: center;
 }
