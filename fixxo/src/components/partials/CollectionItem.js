@@ -18,7 +18,7 @@ const CollectionItem = () => {
         </div>
         <div className="body-section">
             <div className="category">Coats</div>
-            <div className="name">Black Coat of the Best Brandc</div>
+            <div className="name">Black Coat of the Best Brandc And Design</div>
             <StarRating rating="3" />
             <div className="price">$3500</div>
         </div>

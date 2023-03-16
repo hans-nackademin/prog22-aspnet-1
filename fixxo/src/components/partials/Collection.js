@@ -5,7 +5,7 @@ const Collection = ({title}) => {
   return (
     <section className="collection-grid">
         <div className="container">
-            {/* <div className="title">{title}</div> */}
+            <div className="title">{title}</div>
             <div className="item-collection">
                 <CollectionItem />
             </div>

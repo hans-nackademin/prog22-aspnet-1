@@ -76,8 +76,8 @@ button {
   content: "";
   border-top: 2px solid #f5f5f5;
   border-left: 2px solid #f5f5f5;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   position: absolute;
   top: 12px;
   left: 12px;
@@ -86,13 +86,51 @@ button {
   content: "";
   border-bottom: 2px solid #f5f5f5;
   border-right: 2px solid #f5f5f5;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   position: absolute;
   bottom: 12px;
   right: 12px;
 }
 .btn-theme:hover {
+  background-color: #222529;
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+.btn-white {
+  position: relative;
+  color: #222529;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 80px;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  transition: background-color 0.25s, color 0.15s;
+  text-align: center;
+}
+.btn-white::before {
+  content: "";
+  border-top: 2px solid #222529;
+  border-left: 2px solid #222529;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+.btn-white::after {
+  content: "";
+  border-bottom: 2px solid #222529;
+  border-right: 2px solid #222529;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+.btn-white:hover {
   background-color: #222529;
   color: #f5f5f5;
   text-decoration: none;
@@ -277,6 +315,7 @@ header .icons .link {
   margin-bottom: 30px;
 }
 .collection-grid .item-collection {
+  margin-bottom: 40px;
   display: grid;
   gap: 30px;
   grid-template-columns: 1fr;
@@ -296,7 +335,7 @@ header .icons .link {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .collection-grid .item-collection .item .image-section .menu {
     display: none;
   }
@@ -356,7 +395,7 @@ header .icons .link {
   color: #222529;
   font-weight: 700;
   font-size: 1.4em;
-  min-height: 70px;
+  min-height: 50px;
 }
 @media (min-width: 992px) {
   .collection-grid .item-collection .item .body-section .name {
@@ -365,17 +404,86 @@ header .icons .link {
   }
 }
 .collection-grid .item-collection .item .body-section .star-rating {
-  margin-top: 1rem;
-  font-size: 1.8em;
+  margin-top: 0.3rem;
+  font-size: 1.5em;
 }
 .collection-grid .item-collection .item .body-section .price {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  font-size: 1.5em;
+  font-weight: 500;
+  font-size: 1.3em;
 }
 @media (min-width: 992px) {
   .collection-grid .item-collection .item .body-section .price {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "offer";
+  gap: 1rem;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  max-width: 1920px;
+  align-items: stretch;
+}
+@media (min-width: 992px) {
+  .offer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "offer office" "offer party";
+  }
+}
+@media (min-width: 1200px) {
+  .offer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "office offer party";
+  }
+}
+.offer-grid img {
+  height: auto;
+  width: 100%;
+}
+.offer-grid #office-style {
+  grid-area: office;
+  display: none;
+}
+@media (min-width: 992px) {
+  .offer-grid #office-style {
+    display: block;
+  }
+}
+.offer-grid #party-style {
+  grid-area: party;
+  display: none;
+}
+@media (min-width: 992px) {
+  .offer-grid #party-style {
+    display: block;
+  }
+}
+.offer-grid .offer {
+  grid-area: offer;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+.offer-grid .offer .red-border {
+  border: 6px solid #ff7373;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.offer-grid .offer .content {
+  text-align: center;
+  height: auto;
+}
+.offer-grid .offer .content h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.offer-grid .offer .content button {
+  margin-top: 20px;
 }
