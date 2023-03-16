@@ -7,10 +7,10 @@ import SpecialOffers from '../partials/SpecialOffers'
 const Home = () => {
   return (
     <>
-      {/* <Header /> */}
-      {/* <Showcase /> */}
+      <Header />
+      <Showcase />
       <Collection title="Featured Products" />
-      {/* <SpecialOffers /> */}
+      <SpecialOffers />
     </>
   )
 }
