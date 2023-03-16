@@ -17,10 +17,10 @@ const CollectionItem = () => {
             </div>
         </div>
         <div className="body-section">
-            <p className="category">Coats</p>
-            <p className="name">Black Long Coat</p>
+            <div className="category">Coats</div>
+            <div className="name">Black Coat of the Best Brandc</div>
             <StarRating rating="3" />
-            <p className="price">$3500</p>
+            <div className="price">$3500</div>
         </div>
     </div>
   )
