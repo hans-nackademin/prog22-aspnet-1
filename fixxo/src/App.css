@@ -296,8 +296,13 @@ header .icons .link {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-.collection-grid .item-collection .item:hover {
-  border: 1px solid red;
+@media (min-width: 992px) {
+  .collection-grid .item-collection .item .image-section .menu {
+    display: none;
+  }
+  .collection-grid .item-collection .item:hover .image-section .menu {
+    display: block;
+  }
 }
 .collection-grid .item-collection .item .image-section {
   position: relative;

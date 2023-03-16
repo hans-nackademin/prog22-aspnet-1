@@ -28,8 +28,15 @@
 
         .item {
 
-            &:hover {
-                border: 1px solid red;
+            @include lg {
+                .image-section .menu {
+                    display: none;
+                }
+                &:hover {
+                    .image-section .menu {
+                        display: block;
+                    }
+                }
             }
 
            .image-section {
@@ -47,7 +54,6 @@
                     left: 0;
                     height: 100%;
                     width: 100%;
-
 
                     .icons {
                         position: absolute;
