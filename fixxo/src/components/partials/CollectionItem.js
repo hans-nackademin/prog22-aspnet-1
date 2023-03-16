@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import StarRating from './StarRating'
 
 const CollectionItem = () => {
   return (
@@ -14,8 +15,9 @@ const CollectionItem = () => {
             <NavLink className="btn-theme" to="/products">QUICK VIEW</NavLink>
         </div>
         <div className="body-section">
-            <p className="">d</p>
-            <p className="">d</p>
+            <p className="category">Coats</p>
+            <p className="title">Black Long Coat</p>
+            <StarRating rating="3" />
         </div>
     </div>
   )

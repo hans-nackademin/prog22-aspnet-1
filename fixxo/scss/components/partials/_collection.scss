@@ -25,5 +25,9 @@
         @include xxl {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
+
+        .item {
+            border: 1px solid black;
+        }
     }
 }

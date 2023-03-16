@@ -290,3 +290,6 @@ header .icons .link {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+.collection-grid .item-collection .item {
+  border: 1px solid black;
+}

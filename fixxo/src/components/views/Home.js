@@ -6,7 +6,7 @@ import Showcase from '../partials/Showcase'
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <Showcase /> */}
       <Collection title="Featured Products" />
     </>
