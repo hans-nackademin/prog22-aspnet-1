@@ -1,8 +1,6 @@
-﻿using _02_AspNetMVC.Models;
-
-namespace _02_AspNetMVC.ViewModels.Partials
+﻿namespace _02_AspNetMVC.Models
 {
-    public class CollectionViewModel
+    public class CollectionModel
     {
         public string Title { get; set; } = null!;
         public List<string> Categories { get; set; } = null!;

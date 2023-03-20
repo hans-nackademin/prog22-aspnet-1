@@ -19,7 +19,7 @@ namespace _02_AspNetMVC.Controllers
                     ButtonText = "SHOP NOW",
                     ImageUrl = "images/placeholders/625x647.svg"
                 },
-                BestCollection = new CollectionViewModel
+                BestCollection = new CollectionModel
                 {
                     Title = "Best Collection",
                     Categories = new List<string>
