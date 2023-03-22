@@ -1,0 +1,38 @@
+.newsletter {
+    font-family: $font-poppins;
+    background-color: $color-dark-4;
+    padding: 80px 0;
+
+    .container {
+        background-color: $color-white;
+        padding: 70px 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+        position: relative;
+
+        input {
+            position: relative;
+            height: 46px;
+            width: 100%;
+            border-radius: 25px;
+            border: 1px solid $color-dark-5;
+            padding: 0 0 0 40px;
+            outline: 0;
+            
+            &:focus {
+                border: 1px solid $color-dark-4;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 0; 
+            right: 0;
+        }
+    }
+}
