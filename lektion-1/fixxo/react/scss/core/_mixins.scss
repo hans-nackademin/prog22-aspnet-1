@@ -1,0 +1,107 @@
+@mixin md {
+    @media (min-width: $breakpoint-md) {
+        @content
+    }
+}
+@mixin lg {
+    @media (min-width: $breakpoint-lg) {
+        @content
+    }
+}
+@mixin xl {
+    @media (min-width: $breakpoint-xl) {
+        @content
+    }
+}
+@mixin xxl {
+    @media (min-width: $breakpoint-xxl) {
+        @content
+    }
+}
+@mixin xxxl {
+    @media (min-width: $breakpoint-xxxl) {
+        @content
+    }
+}
+
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-default {
+    font-size: 1em;
+    font-weight: $font-weight-regular;
+    font-family: $font-poppins;
+    line-height: $font-lineheight-standard;
+}
+
+@mixin font-title-1 {
+    font-size: 2.5em;
+    font-weight: $font-weight-black;
+    font-family: $font-poppins;
+    line-height: $font-lineheight-standard;
+    margin-bottom: 0.6em;
+
+    @include lg {
+        font-size: 3em;
+    }
+    @include xl {
+        font-size: 4.063em;
+    }
+}
+@mixin font-title-2 {
+    font-size: 1.5em;
+    font-weight: $font-weight-bold;
+    font-family: $font-poppins;
+    line-height: $font-lineheight-small;
+    margin-bottom: 0.6em;
+
+    @include lg {
+        font-size: 1.9em;
+    }
+    @include xl {
+        font-size: 2.188em;
+    }
+}
+@mixin font-title-3 {
+    font-size: 1em;
+    font-weight: $font-weight-medium;
+    font-family: $font-poppins;
+    line-height: $font-lineheight-standard;
+    margin-bottom: 1.5em;
+
+    @include lg {
+        font-size: 1.1em;
+    }
+    @include xl {
+        font-size: 1.250em;
+    }
+}
+
+@mixin color-default {
+    background-color: $color-light-1;
+    color: $color-dark-2;
+}
+@mixin color-theme-default {
+    background-color: $color-theme;
+    color: $color-light-2;
+}
+@mixin color-dark-default {
+    background-color: $color-dark-2;
+    color: $color-light-2;
+}
+
+@mixin color-default-with-border {
+    @include color-default;
+    border: 1px solid $color-dark-2;
+}
+@mixin color-theme-default-with-border {
+    @include color-theme-default;
+    border: 1px solid $color-light-2;
+}
+@mixin color-dark-default-with-border {
+    @include color-dark-default;
+    border: 1px solid $color-dark-2;
+}

@@ -1,0 +1,80 @@
+button {
+    border: none;
+}
+
+.btn-theme {
+    position: relative;
+    @include color-theme-default;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: background-color 0.25s;
+    text-align: center;
+
+    &::before {
+        content: '';
+        border-top: 2px solid $color-light-2;
+        border-left: 2px solid $color-light-2;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+    &::after {
+        content: '';
+        border-bottom: 2px solid $color-light-2;
+        border-right: 2px solid $color-light-2;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    &:hover {
+        @include color-dark-default;
+        text-decoration: none;
+    }
+}
+
+
+.btn-white {
+    position: relative;
+    color: $color-dark-2;
+    background-color: $color-light-1;
+    border: 1px solid $color-shadow-1;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: inline-block;
+    transition: background-color 0.25s, color 0.15s;
+    text-align: center;
+
+    &::before {
+        content: '';
+        border-top: 2px solid $color-dark-2;
+        border-left: 2px solid $color-dark-2;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+    &::after {
+        content: '';
+        border-bottom: 2px solid $color-dark-2;
+        border-right: 2px solid $color-dark-2;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    &:hover {
+        @include color-dark-default;
+        text-decoration: none;
+    }
+}

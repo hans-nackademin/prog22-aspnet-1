@@ -1,0 +1,85 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: $color-transparent-light-1;
+
+    #logotype {
+        grid-area: logotype;
+        font-size: 35px;
+        font-weight: $font-weight-bold;
+        color: $color-dark-2;
+        text-decoration: none;
+    }
+
+    #menu {
+        grid-area: menu;
+
+        @include lg {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "menulinks menuicons";
+        }
+
+        .menu-links {
+            grid-area: menulinks;
+
+        }
+
+        .menu-icons {
+            grid-area: menuicons;
+            margin-top: 40px;
+
+
+            @include lg {
+                text-align: right;
+                margin-top: 0;
+            }
+            
+        }
+
+    }
+
+    #toggle-icon {
+        grid-area: toggleicon;
+        display: flex;
+        justify-content: flex-end;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        grid-template-areas: "logotype toggleicon"
+                             "menu menu";
+
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "logotype menu menu";
+        }
+    }
+
+    .links {
+        @include lg {
+            @include center-content;
+        }
+
+    }
+
+    .icons {
+        .link {
+            margin-left: 1rem;
+        }
+        
+        @include center-content;
+        @include lg {
+            justify-content: flex-end;
+        }
+    }
+}

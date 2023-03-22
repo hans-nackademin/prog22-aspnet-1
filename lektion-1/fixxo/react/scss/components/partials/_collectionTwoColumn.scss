@@ -1,0 +1,26 @@
+.collection-twocolumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .bg-gray {
+        background-color: $color-shadow-1;
+    }
+
+    .column {
+        @include center-content;
+
+        .content {
+            text-align: center;
+
+            h1 {
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        &.item-collection {
+            justify-content: flex-start;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

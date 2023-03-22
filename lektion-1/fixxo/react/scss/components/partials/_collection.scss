@@ -1,0 +1,128 @@
+.collection-grid {
+    .container {
+
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        @include center-content;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .item-collection {
+        margin-bottom: 40px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+
+        @include md {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include lg {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @include xxl {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .item {
+            @include xl {
+                .image-section .menu {
+                    display: none;
+                }
+                &:hover {
+                    .image-section .menu {
+                        display: block;
+                    }
+                }
+            }
+
+           .image-section {
+                position: relative; 
+
+                img {
+
+                    width: 100%;
+                    height: auto;
+                }
+
+                .menu {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+
+                    .icons {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+
+                        .link {
+                            margin: 15px;
+                            height: 50px;
+                            width: 50px;
+                            font-size: 1.4em;
+
+                            @include lg {
+                                height: 36px;
+                                width: 36px;
+                                font-size: 1em;
+                            }
+                        }
+                    }
+
+                    .btn-theme {
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                    }
+                }
+           }
+
+           .body-section {
+                text-align: center;
+
+                .category {
+                    margin-top: 1rem;
+                    color: $color-dark-3;
+                    font-weight: $font-weight-medium;
+                }
+
+                .name {
+                    margin-top: 1rem;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    color: $color-dark-2;
+                    font-weight: $font-weight-bold;
+                    font-size: 1.4em;
+                    min-height: 50px;
+
+                    @include lg {
+                        font-size: 1.2em;
+                        min-height: 60px;
+                    }
+
+                }
+                
+                .star-rating {
+                    margin-top: 0.3rem;
+                    font-size: 1.5em;
+                }
+                
+                .price{
+                    margin-top: 0.5rem;
+                    margin-bottom: 1rem;
+                    font-weight: $font-weight-medium;
+                    font-size: 1.3em;
+
+                    @include lg {
+                        font-size: 1.2em;
+                    }
+                } 
+           }
+        }
+    }
+}
