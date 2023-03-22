@@ -1,6 +1,5 @@
 ﻿using _02_AspNetMVC.Models;
 using _02_AspNetMVC.ViewModels.Home;
-using _02_AspNetMVC.ViewModels.Partials;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _02_AspNetMVC.Controllers
