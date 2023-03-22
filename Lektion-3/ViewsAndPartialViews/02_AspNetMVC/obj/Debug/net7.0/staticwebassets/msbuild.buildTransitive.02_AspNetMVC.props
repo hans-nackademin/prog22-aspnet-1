@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\02_AspNetMVC.props" />
-</Project>

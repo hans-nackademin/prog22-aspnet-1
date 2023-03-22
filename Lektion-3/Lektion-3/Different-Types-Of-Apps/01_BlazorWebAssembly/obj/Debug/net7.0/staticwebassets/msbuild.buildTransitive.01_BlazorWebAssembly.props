@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\01_BlazorWebAssembly.props" />
-</Project>
