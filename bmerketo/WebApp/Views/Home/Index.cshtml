@@ -1,1 +1,19 @@
-﻿
+﻿@model HomeIndexViewModel
+
+<partial name="/Views/Partials/_Showcase.cshtml" />
+
+@if (Model?.BestCollection != null)
+{
+    <partial name="/Views/Partials/_BestCollection.cshtml" model="Model.BestCollection" />
+}
+@if (Model?.UpToSell != null)
+{
+    <partial name="/Views/Partials/_UpToSell.cshtml" model="Model.UpToSell" />
+}
+@if (Model?.TopSelling != null)
+{
+    <partial name="/Views/Partials/_TopSelling.cshtml" model="Model.TopSelling" />
+}
+
+<partial name="/Views/Partials/_Newsletter.cshtml" />
+

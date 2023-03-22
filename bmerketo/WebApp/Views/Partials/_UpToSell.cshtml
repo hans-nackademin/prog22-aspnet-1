@@ -1,0 +1,39 @@
+﻿@model CollectionItem[]
+
+<section class="up-to-sell">
+    <div class="container">
+        <div class="collection-grid">
+            
+            @if(Model != null)
+            {
+                <partial name="/Views/Partials/Components/_CollectionItem.cshtml" model="Model[0]" />
+
+                <div class="collection-item collection-content">
+                    <div class="container">
+                        <div class="title-red">UP TO SELL</div>
+                        <div class="title">50% OFF</div>
+                        <div class="ingress">Get the Best Price</div>
+                        <div class="text">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</div>
+                        <a href="#" class="link">Discover More</a>
+                    </div>
+                </div>
+
+                <partial name="/Views/Partials/Components/_CollectionItem.cshtml" model="Model[1]" />
+
+            }
+            else
+            {
+                <div class="collection-item collection-content">
+                    <div class="container">
+                        <div class="title-red">UP TO SELL</div>
+                        <div class="title">50% OFF</div>
+                        <div class="ingress">Get the Best Price</div>
+                        <div class="text">Get the best daily offer et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren no sea taki</div>
+                        <a href="#" class="link">Discover More</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+﻿@model BestCollection
+
+<section class="best-collection">
+    <div class="container">
+        <h1 class="collection-title">Best Collection</h1>
+        <ul class="categories">
+
+            @if(Model?.Categories != null)
+            {
+                @foreach (var category in Model.Categories)
+                {
+                    <li class="category-item">@category</li>
+                }
+            }
+
+        </ul>
+        <div class="collection-grid">
+
+            @if(Model?.Items != null)
+            {
+                @foreach (var item in Model.Items)
+                {
+                    <partial name="/Views/Partials/Components/_CollectionItem.cshtml" model="item" />
+                }
+            }
+
+        </div>
+        <div class="load-more">
+            <button class="btn-outline-white">LOAD MORE <i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+    </div>
+</section>
