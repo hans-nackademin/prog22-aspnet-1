@@ -1,0 +1,16 @@
+﻿@model TransientService
+@inject TransientService _service
+
+<div class="mb-4">
+    <div><strong>Model:</strong></div>
+    <div>@Model.GetId()</div>
+</div>
+
+<div class="mb-4">
+    <div><strong>Inject:</strong></div>
+    <div>@_service.GetId()</div>
+</div>
+
+<div class="mt-4">
+    <partial name="/Views/Partials/_Transient.cshtml" model="Model" />
+</div>

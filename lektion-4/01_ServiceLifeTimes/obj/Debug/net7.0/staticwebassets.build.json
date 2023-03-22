@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "DfI1BTekng208ABXiEcyqBODYVIr+RJBL0LMEgx7vLA=",
+  "Source": "01_ServiceLifeTimes",
+  "BasePath": "_content/01_ServiceLifeTimes",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "01_ServiceLifeTimes\\wwwroot",
+      "Source": "01_ServiceLifeTimes",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\",
+      "BasePath": "_content/01_ServiceLifeTimes",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\css\\site.css",
+      "SourceId": "01_ServiceLifeTimes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\",
+      "BasePath": "_content/01_ServiceLifeTimes",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\favicon.ico",
+      "SourceId": "01_ServiceLifeTimes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\",
+      "BasePath": "_content/01_ServiceLifeTimes",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\js\\site.js",
+      "SourceId": "01_ServiceLifeTimes",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-4\\01_ServiceLifeTimes\\wwwroot\\",
+      "BasePath": "_content/01_ServiceLifeTimes",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}

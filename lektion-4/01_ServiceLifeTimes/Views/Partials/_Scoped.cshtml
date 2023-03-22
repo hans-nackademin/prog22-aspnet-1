@@ -1,0 +1,12 @@
+﻿@model ScopedService
+@inject ScopedService _service
+
+<div class="mb-4">
+    <div><strong>Partial Model:</strong></div>
+    <div>@Model.GetId()</div>
+</div>
+
+<div class="mb-4">
+    <div><strong>Partial Inject:</strong></div>
+    <div>@_service.GetId()</div>
+</div>
