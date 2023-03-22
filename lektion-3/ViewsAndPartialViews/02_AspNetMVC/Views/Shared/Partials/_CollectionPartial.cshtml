@@ -1,0 +1,26 @@
+﻿@model CollectionModel
+
+<section class="collection">
+    <div class="container">
+        <h1 class="collection-title">@Model.Title</h1>
+        
+        <ul class="categories">
+            @foreach(var category in Model.Categories)
+            {
+                <li class="category-item">@category</li>
+            }
+        </ul>
+        
+        <div class="collection-grid">
+
+            @foreach(var item in Model.CollectionItems)
+            {
+                <partial name="~/Views/Shared/Partials/_CollectionItemPartial.cshtml" model="item" />
+            }
+
+        </div>
+        <div class="load-more">
+            <button class="btn-white">LOAD MORE <i class="fa-solid fa-rotate-right"></i></button>
+        </div>
+    </div>
+</section>
