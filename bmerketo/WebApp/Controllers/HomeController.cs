@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
+using WebApp.Models.Forms;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers;
@@ -41,7 +42,9 @@ public class HomeController : Controller
                 new CollectionItem() { Id = 15, Title = "Apple watch collection", Price = 30.00M, ImageUrl = "images/placeholders/270x295.svg" },
                 new CollectionItem() { Id = 16, Title = "Apple watch collection", Price = 30.00M, ImageUrl = "images/placeholders/270x295.svg" },
                 new CollectionItem() { Id = 17, Title = "Apple watch collection", Price = 30.00M, ImageUrl = "images/placeholders/270x295.svg" }
-            }
+            },
+
+            NewsletterForm = new NewsletterForm()
         };
 
         return View(viewModel);
