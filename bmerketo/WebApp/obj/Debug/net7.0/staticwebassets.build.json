@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wNgdYGUM/zRPM8KyzwMEU16cTPaeeEwJkFPy8IQMcz8=",
+  "Hash": "L0JTNia4HzhAYvVkf1dL+TZ+WwTRKE/SGdWSUBoQC1w=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\bmerketo\\WebApp\\wwwroot\\images\\favicon.ico",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\bmerketo\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "images/favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\favicon.ico"
     },
     {
       "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\bmerketo\\WebApp\\wwwroot\\images\\logo.svg",
