@@ -10,4 +10,7 @@ html, body {
     opacity: 0.99;
     transform: translateX(-100%);
 }
- 
+
+.invalid {
+    border: 1px solid $color-theme-1 !important;
+} 

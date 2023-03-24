@@ -1,6 +1,7 @@
 .showcase {
     background-color: $color-theme-3;
-    padding: 60px 0;
+    padding: 60px 0px;
+
 
     @include lg {
         padding: 0px 0 40px 0;
@@ -11,6 +12,7 @@
     }
 
     .container {
+        padding-top: 80px;
         display: block;
         text-align: center;
 

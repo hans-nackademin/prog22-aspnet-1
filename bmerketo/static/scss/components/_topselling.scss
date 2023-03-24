@@ -1,5 +1,5 @@
 .top-selling {
-    padding: 40px 0;
+    padding: 40px 20px;
 
     .collection-title {
         text-align: center;
@@ -7,11 +7,6 @@
         font-weight: $font-weight-semibold;
         font-size: 30px;
         color: $color-dark-2;
-    }
-
-    .container-fluid {
-        padding-left: 4rem;
-        padding-right: 4rem;
     }
 
     .collection-grid {
