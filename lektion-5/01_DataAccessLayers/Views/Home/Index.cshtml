@@ -1,0 +1,37 @@
+﻿@model HomeIndexViewModel
+
+@{
+    var sql_products = await productService.GetAllFromSqlAsync();
+    var nosql_products = await productService.GetAllFromNoSqlAsync();
+}
+
+<div class="container my-5">
+    <h5>Sql Products</h5>
+    @foreach(var item in Model.SqlProducts)
+    {
+        <div>@item.ArticleNumber, @item.Name</div>
+    }
+</div>
+<div class="container my-5">
+    <h5>No Sql Products</h5>
+    @foreach (var item in Model.NoSqlProducts)
+    {
+        <div>@item.ArticleNumber, @item.Name</div>
+    }
+</div>
+
+<div class="container my-5">
+    <h5>INJECT Sql Products</h5>
+    @foreach (var product in sql_products)
+    {
+        <div>@product.ArticleNumber, @product.Name</div>
+    }
+</div>
+
+<div class="container my-5">
+    <h5>INJECT NoSql Products</h5>
+    @foreach (var product in nosql_products)
+    {
+        <div>@product.ArticleNumber, @product.Name</div>
+    }
+</div>
