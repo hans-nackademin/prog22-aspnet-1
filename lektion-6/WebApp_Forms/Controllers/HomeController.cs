@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApp_Forms.Models.Forms;
 
 namespace WebApp_Forms.Controllers
 {
@@ -11,11 +12,17 @@ namespace WebApp_Forms.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(string something)
+        public IActionResult Index(UserRegistrationForm form)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+         
         }
-
-
     }
 }

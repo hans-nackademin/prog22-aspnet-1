@@ -6,15 +6,18 @@
         
         <div class="mb-3">
             <label>First Name</label>
-            <input asp-for="FirstName" class="form-control" />
+            <input asp-for="FirstName" class="form-control" onkeyup="validate(event)" />
+            <span asp-validation-for="FirstName"></span>
         </div>
         <div class="mb-3">
             <label>Last Name</label>
-            <input asp-for="LastName" class="form-control" />
+            <input asp-for="LastName" class="form-control" onkeyup="validate(event)" />
+            <span asp-validation-for="LastName"></span>
         </div>
         <div class="mb-3">
             <label>Email</label>
-            <input asp-for="Email" class="form-control" />
+            <input asp-for="Email" class="form-control" onkeyup="validate(event)" />
+            <span asp-validation-for="Email"></span>
         </div>
     
         <button type="submit" class="btn btn-secondary">SUBMIT</button>
