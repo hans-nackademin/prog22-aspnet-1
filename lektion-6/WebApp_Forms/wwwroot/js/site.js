@@ -15,7 +15,14 @@ const emailValidation = (target) => {
         document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = ""
 
 }
-const passwordValidation = (target) => { console.log(target.value) }
+const passwordValidation = (target) => {
+    const regEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+
+    if (!regEx.test(target.value))
+        document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = `must be a valid password`
+    else
+        document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = ""
+}
 
 
 const validate = (event) => {
