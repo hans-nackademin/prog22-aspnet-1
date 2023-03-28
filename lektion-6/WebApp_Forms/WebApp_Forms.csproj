@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WebApp_Forms.Shared\WebApp_Forms.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
