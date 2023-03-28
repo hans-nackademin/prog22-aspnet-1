@@ -6,20 +6,39 @@
         
         <div class="mb-3">
             <label>First Name</label>
-            <input asp-for="FirstName" class="form-control" onkeyup="validate(event)" />
+            <input asp-for="FirstName" class="form-control" />
             <span asp-validation-for="FirstName"></span>
         </div>
         <div class="mb-3">
             <label>Last Name</label>
-            <input asp-for="LastName" class="form-control" onkeyup="validate(event)" />
+            <input asp-for="LastName" class="form-control"  />
             <span asp-validation-for="LastName"></span>
         </div>
         <div class="mb-3">
             <label>Email</label>
-            <input asp-for="Email" class="form-control" onkeyup="validate(event)" />
+            <input asp-for="Email" class="form-control"  />
             <span asp-validation-for="Email"></span>
         </div>
-    
+        <div class="mb-3">
+            <label>Password</label>
+            <input asp-for="Password" class="form-control"  />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="mb-3">
+            <label>Street Name</label>
+            <input asp-for="StreetName" class="form-control" />
+            <span asp-validation-for="StreetName"></span>
+        </div>
+        <div class="mb-3">
+            <label>Postal Code</label>
+            <input asp-for="PostalCode" class="form-control" />
+            <span asp-validation-for="PostalCode"></span>
+        </div>
+        <div class="mb-3">
+            <label>City</label>
+            <input asp-for="City" class="form-control" />
+            <span asp-validation-for="City"></span>
+        </div>
         <button type="submit" class="btn btn-secondary">SUBMIT</button>
     </form>
 

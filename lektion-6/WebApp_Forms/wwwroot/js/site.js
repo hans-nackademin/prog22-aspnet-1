@@ -24,19 +24,23 @@ const passwordValidation = (target) => {
         document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = ""
 }
 
+const inputs = document.querySelectorAll(`[data-val-required]`)
+for (let input of inputs)
+    input.addEventListener('keyup', function(event) {
+        switch (event.target.type) {
+            case 'text':
+                textValidation(event.target, 2)
+                break
 
-const validate = (event) => {
-    switch (event.target.type) {
-        case 'text':
-            textValidation(event.target, 2)
-            break
+            case 'email':
+                emailValidation(event.target)
+                break
 
-        case 'email':
-            emailValidation(event.target)
-            break
+            case 'password':
+                passwordValidation(event.target)
+                break
+        }
+    })
 
-        case 'password':
-            passwordValidation(event.target)
-            break
-    }
-}
+console.log(inputs)
+console.log('testar')
