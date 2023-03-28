@@ -8,10 +8,10 @@ namespace WebApp_Forms.Models.Forms
         public string LastName { get; set; } = null!;
 
         [DataType(DataType.EmailAddress)]
-        public string? Email { get; set; }
+        public string Email { get; set; } = null!;
 
         [DataType(DataType.Password)]
-        public string? Password { get; set; }
+        public string Password { get; set; } = null!;
 
         public string StreetName { get; set; } = null!;
         public string PostalCode { get; set; } = null!;
