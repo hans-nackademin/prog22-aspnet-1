@@ -14,15 +14,12 @@ namespace WebApp_Forms.Controllers
         [HttpPost]
         public IActionResult Index(UserRegistrationForm form)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid)
                 return View();
-            }
-            else
-            {
-                return View();
-            }
-         
+
+
+            return View();
+
         }
     }
 }
