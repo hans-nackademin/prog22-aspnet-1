@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_Forms", "WebApp_Forms\WebApp_Forms.csproj", "{983BB49D-2068-46BF-AA20-895D9182D145}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_Forms.Shared", "WebApp_Forms.Shared\WebApp_Forms.Shared.csproj", "{6A0E9081-2037-4083-965A-ADF4A32F5C6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{983BB49D-2068-46BF-AA20-895D9182D145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983BB49D-2068-46BF-AA20-895D9182D145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983BB49D-2068-46BF-AA20-895D9182D145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0E9081-2037-4083-965A-ADF4A32F5C6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0E9081-2037-4083-965A-ADF4A32F5C6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0E9081-2037-4083-965A-ADF4A32F5C6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0E9081-2037-4083-965A-ADF4A32F5C6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
