@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebApp_Forms.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WebApp_Forms.props",
+      "PackagePath": "build\\WebApp_Forms.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApp_Forms.props",
+      "PackagePath": "buildMultiTargeting\\WebApp_Forms.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WebApp_Forms.props",
+      "PackagePath": "buildTransitive\\WebApp_Forms.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

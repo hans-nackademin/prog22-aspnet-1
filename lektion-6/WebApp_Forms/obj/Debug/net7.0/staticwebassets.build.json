@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "d9oGMfLanSMgIc4oZ/orRhT+IXmYBHjeKIYrBfq6cbg=",
+  "Source": "WebApp_Forms",
+  "BasePath": "_content/WebApp_Forms",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApp_Forms\\wwwroot",
+      "Source": "WebApp_Forms",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\",
+      "BasePath": "_content/WebApp_Forms",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\css\\site.css",
+      "SourceId": "WebApp_Forms",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\",
+      "BasePath": "_content/WebApp_Forms",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\favicon.ico",
+      "SourceId": "WebApp_Forms",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\",
+      "BasePath": "_content/WebApp_Forms",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\js\\site.js",
+      "SourceId": "WebApp_Forms",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HansMattin-Lassei\\Documents\\Education\\PROG22\\aspnet-1\\lektion-6\\WebApp_Forms\\wwwroot\\",
+      "BasePath": "_content/WebApp_Forms",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}
