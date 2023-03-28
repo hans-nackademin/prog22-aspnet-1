@@ -1,4 +1,5 @@
-﻿using WebApp_Forms.Shared.Models.Entities;
+﻿using WebApp_Forms.Shared.Models;
+using WebApp_Forms.Shared.Models.Entities;
 using WebApp_Forms.Shared.Repositories;
 
 namespace WebApp_Forms.Shared.Services;
@@ -15,11 +16,27 @@ public class UserService
     }
 
 
-    public async Task AddAsync()
+    public async Task<User> CreateAsync(User model, string password)
     {
-        await _addressRepo.CreateAsync(new AddressEntity());
-        await _userRepo.CreateAsync(new UserEntity());
+        var addressEntity = await _addressRepo.GetAsync(x => x.StreetName == model.StreetName && x.PostalCode == model.PostalCode);
+        addressEntity ??= await _addressRepo.CreateAsync(new AddressEntity
+        {
+            StreetName = model.StreetName!,
+            PostalCode = model.PostalCode!,
+            City = model.City!,
+        });
 
+        var userEntity = await _userRepo.CreateAsync(new UserEntity
+        {
+            FirstName = model.FirstName!,
+            LastName = model.LastName!,
+            Email = model.Email!,
+            Password = password,
+            AddressId = addressEntity.Id
+        });
+        
+        model.Id = userEntity.Id;
+        return model;
     }
 
 }
