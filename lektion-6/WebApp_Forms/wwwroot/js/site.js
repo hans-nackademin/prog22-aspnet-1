@@ -9,7 +9,11 @@
 const emailValidation = (target) => {
     const regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    console.log(target.value)
+    if (!regEx.test(target.value))
+        document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = `must be a valid email address`
+    else
+        document.querySelector(`[data-valmsg-for="${target.id}"]`).innerHTML = ""
+
 }
 const passwordValidation = (target) => { console.log(target.value) }
 
