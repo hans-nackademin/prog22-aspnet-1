@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Security.Policy;
 using WebApp.Factories;
 using WebApp.Models.Identity;
 
 namespace WebApp.ViewModels
 {
-    public class SignUpViewModel
+    public class SignInViewModel
     {
         [Display(Name = "E-postadress")]
         [Required(ErrorMessage = "Du måste ange en e-postadress")]
@@ -17,20 +16,11 @@ namespace WebApp.ViewModels
         [DataType(DataType.Password)]
         public string Password { get; set; } = null!;
 
-        [Display(Name = "Bekräfta Lösenord")]
-        [Required(ErrorMessage = "Du måste ange bekräfta lösenordet")]
-        [DataType(DataType.Password)]
-        [Compare(nameof(Password), ErrorMessage = "Lösenorden matchar inte")]
-        public string ConfirmPassword { get; set; } = null!;
-
         public string ReturnUrl { get; set; } = "/";
 
-        public string RoleName { get; set; } = "user";
-
-
-        public static implicit operator CustomIdentityUser(SignUpViewModel model)
+        public static implicit operator CustomIdentityUser(SignInViewModel model)
         {
-            var user = CustomIdentityUserFactory.Create(model.Email);         
+            var user = CustomIdentityUserFactory.Create(model.Email);
             return user;
         }
     }

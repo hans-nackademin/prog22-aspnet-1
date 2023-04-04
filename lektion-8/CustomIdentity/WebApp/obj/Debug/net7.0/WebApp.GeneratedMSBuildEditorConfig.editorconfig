@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-8\CustomIdentity\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/HansMattin-Lassei/Documents/Education/PROG22/aspnet-1/lektion-8/CustomIdentity/WebApp/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HansMattin-Lassei/Documents/Education/PROG22/aspnet-1/lektion-8/CustomIdentity/WebApp/Views/Auth/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HansMattin-Lassei/Documents/Education/PROG22/aspnet-1/lektion-8/CustomIdentity/WebApp/Views/Auth/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

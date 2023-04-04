@@ -1,1 +1,8 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity;
+@using WebApp.Models.Identity;
+@inject SignInManager<CustomIdentityUser> SignInManager
+
+@if (SignInManager.IsSignedIn(User)) {
+    <div class="display-6">@User.Identity!.Name</div>
+    <a asp-action="logout" asp-controller="auth">Logga ut</a>
+} 
