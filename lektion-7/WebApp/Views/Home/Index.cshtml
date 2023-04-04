@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Välkommen";
+}
+
+<div class="container mt-5">
+    
+    @if(SignInManager.IsSignedIn(User))
+    {
+        <a asp-action="Index" asp-controller="Account" class="m-2">Mina Sidor</a>
+    }
+    else
+    {
+        <a asp-action="Index" asp-controller="Register" class="m-2">Registrera</a>
+        <a asp-action="Index" asp-controller="Login" class="m-2">Logga in</a>
+    }
+
+</div>

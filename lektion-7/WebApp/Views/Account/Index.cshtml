@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Mina Sidor";
+}
+
+<div class="container mt-5">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div>Välkommen @User.Identity?.Name</div>
+        <div>
+            <a asp-action="Index" asp-controller="Logout">Logga ut</a>
+        </div>
+    }
+</div>

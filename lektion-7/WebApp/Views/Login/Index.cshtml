@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Logga in";
+}
+
+@model LoginViewModel
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-center">
+        <form method="post" class="col-6" novalidate>
+
+            <div class="mb-3 d-flex justify-content-center">
+                <div asp-validation-summary="ModelOnly"></div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <small><span asp-validation-for="Email" class="text-danger"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <small><span asp-validation-for="Password" class="text-danger"></span></small>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">LOGGA IN</button>
+            </div>
+        </form>
+    </div>
+</div>
