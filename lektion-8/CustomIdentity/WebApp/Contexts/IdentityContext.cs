@@ -9,5 +9,7 @@ namespace WebApp.Contexts
         public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
         {
         }
+
+
     }
 }
