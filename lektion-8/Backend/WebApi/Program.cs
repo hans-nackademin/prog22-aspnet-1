@@ -13,6 +13,9 @@ builder.Services.AddDbContext<DataContext>(x =>
 builder.Services.AddScoped<ProductRepository>();
 
 var app = builder.Build();
+
+app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
