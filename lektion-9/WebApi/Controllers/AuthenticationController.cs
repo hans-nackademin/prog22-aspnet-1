@@ -1,8 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.AccessControl;
+using System.Security.Claims;
+using System.Text;
+using WebApi.Helpers;
 using WebApi.Models.DTO;
+using WebApi.Services;
 
 namespace WebApi.Controllers;
 
@@ -10,16 +17,22 @@ namespace WebApi.Controllers;
 [ApiController]
 public class AuthenticationController : ControllerBase
 {
-    private readonly UserManager<IdentityUser> _userManager;
+    #region Constructors & Private Fields
 
-    public AuthenticationController(UserManager<IdentityUser> userManager)
+    private readonly UserManager<IdentityUser> _userManager;
+    private readonly SignInManager<IdentityUser> _signInManager;
+    private readonly AuthService _auth;
+
+    public AuthenticationController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, AuthService auth)
     {
         _userManager = userManager;
+        _signInManager = signInManager;
+        _auth = auth;
     }
 
+    #endregion
 
-
-
+    #region SignUp
 
     [Route("SignUp")]
     [HttpPost]
@@ -38,16 +51,40 @@ public class AuthenticationController : ControllerBase
         return BadRequest(model);
     }
 
+    #endregion
+
+    #region SignIn
 
     [Route("SignIn")]
     [HttpPost]
-    public async Task<IActionResult> SignIn()
+    public async Task<IActionResult> SignIn(SignInModel model)
     {
         if (ModelState.IsValid)
         {
+            var token = await _auth.SignInAsync(model.Email, model.Password); 
+            if (!string.IsNullOrEmpty(token))
+                return Ok(token);
+        }
+
+        return Unauthorized("Incorrect email or password");
+    }
+
+    #endregion
+
+    #region SignOut
+
+    [Route("SignOut")]
+    [HttpPost]
+    public async Task<IActionResult> SignOut()
+    {
+        if (_signInManager.IsSignedIn(User))
+        {
+            await _signInManager.SignOutAsync();
             return Ok();
         }
 
-        return BadRequest("Incorrect email or password");
+        return Unauthorized();
     }
+
+    #endregion
 }
