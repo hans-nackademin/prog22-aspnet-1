@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AspNetMVC_WebApp.props" />
+</Project>
