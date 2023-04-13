@@ -21,7 +21,7 @@ public class JwtToken
         var securityTokenDescriptor = new SecurityTokenDescriptor
         {
             Issuer = _configuration.GetSection("TokenValidation").GetValue<string>("Issuer")!,
-            Audience = _configuration.GetSection("TokenValidation").GetValue<string>("AuthenticatedUsers")!,
+            Audience = _configuration.GetSection("TokenValidation").GetValue<string>("Audience")!,
             Subject = claimsIdentity,
             Expires = expiresAt,
             SigningCredentials = new SigningCredentials(
