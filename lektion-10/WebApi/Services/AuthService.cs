@@ -14,13 +14,15 @@ public class AuthService
     private readonly AddressRepository _addressRepository;
     private readonly UserManager<IdentityUser> _userManager;
     private readonly SignInManager<IdentityUser> _signInManager;
+    private readonly JwtToken _jwt;
 
-    public AuthService(UserProfileRepository userProfileRepository, AddressRepository addressRepository, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+    public AuthService(UserProfileRepository userProfileRepository, AddressRepository addressRepository, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, JwtToken jwt)
     {
         _userProfileRepository = userProfileRepository;
         _addressRepository = addressRepository;
         _userManager = userManager;
         _signInManager = signInManager;
+        _jwt = jwt;
     }
 
     public async Task<bool> RegisterAsync(AuthenticationRegistrationModel model)
@@ -66,7 +68,7 @@ public class AuthService
                     new Claim(ClaimTypes.Name, identityUser.Email!)
                 });
 
-                return JwtToken.Generate(claimsIdentity, DateTime.Now.AddHours(1), "582d128a-d1ae-43f9-a521-51712709f178");
+                return _jwt.Generate(claimsIdentity, DateTime.Now.AddHours(1));
             }
 
         }

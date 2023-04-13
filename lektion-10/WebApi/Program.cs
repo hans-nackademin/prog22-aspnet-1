@@ -1,6 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using WebApi.Contexts;
+using WebApi.Helpers;
 using WebApi.Repositories;
 using WebApi.Services;
 
@@ -14,6 +18,7 @@ builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configura
 builder.Services.AddScoped<UserProfileRepository>();
 builder.Services.AddScoped<AddressRepository>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<JwtToken>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(x =>
 {
@@ -22,7 +27,39 @@ builder.Services.AddDefaultIdentity<IdentityUser>(x =>
     x.SignIn.RequireConfirmedAccount = false;
 }).AddEntityFrameworkStores<IdentityContext>();
 
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
+
+}).AddJwtBearer(x =>
+{
+    x.Events = new JwtBearerEvents
+    {
+        OnTokenValidated = context =>
+        {
+            if (string.IsNullOrEmpty(context?.Principal?.FindFirst("id")?.Value) ||  string.IsNullOrEmpty(context?.Principal?.Identity?.Name))
+                context?.Fail("Unauthorized");
+
+            return Task.CompletedTask;
+        }
+    };
+
+    x.RequireHttpsMetadata = true;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = builder.Configuration.GetSection("TokenValidation").GetValue<string>("Issuer")!,
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration.GetSection("TokenValidation").GetValue<string>("Audience")!,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(builder.Configuration.GetSection("TokenValidation").GetValue<string>("SecretKey")!))
+    };
+});
 
 
 var app = builder.Build();

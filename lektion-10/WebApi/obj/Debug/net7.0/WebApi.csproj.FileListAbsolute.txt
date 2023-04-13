@@ -83,3 +83,4 @@ C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-10\WebApi
 C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-10\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-10\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-10\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\HansMattin-Lassei\Documents\Education\PROG22\aspnet-1\lektion-10\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
