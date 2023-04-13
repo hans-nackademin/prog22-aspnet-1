@@ -9,7 +9,10 @@ using WebApi.Repositories;
 using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -19,6 +22,7 @@ builder.Services.AddScoped<UserProfileRepository>();
 builder.Services.AddScoped<AddressRepository>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtToken>();
+builder.Services.AddScoped<UserService>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(x =>
 {

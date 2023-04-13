@@ -1,4 +1,5 @@
-﻿using WebApi.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApi.Contexts;
 using WebApi.Models.Entities;
 
 namespace WebApi.Repositories;
@@ -23,5 +24,13 @@ public class UserProfileRepository : Repository<UserProfileEntity>
             return true;
         }
         catch { return false; }
+    }
+
+    public override async Task<IEnumerable<UserProfileEntity>> GetAllAsync()
+    {
+        return await _identityContext.UserProfiles
+            .Include(x => x.User)
+            .Include(x => x.Addresses)
+            .ToListAsync();
     }
 }
