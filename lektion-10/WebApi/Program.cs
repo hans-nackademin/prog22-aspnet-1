@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Contexts;
 using WebApi.Repositories;
@@ -13,6 +14,14 @@ builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configura
 builder.Services.AddScoped<UserProfileRepository>();
 builder.Services.AddScoped<AddressRepository>();
 builder.Services.AddScoped<AuthService>();
+
+builder.Services.AddDefaultIdentity<IdentityUser>(x =>
+{
+    x.User.RequireUniqueEmail = true;
+    x.Password.RequiredLength = 8;
+    x.SignIn.RequireConfirmedAccount = false;
+}).AddEntityFrameworkStores<IdentityContext>();
+
 
 
 

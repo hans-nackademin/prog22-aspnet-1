@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
+using System.Security.Claims;
+using WebApi.Helpers;
 using WebApi.Models.DTO;
 using WebApi.Models.Entities;
 using WebApi.Repositories;
@@ -10,12 +13,14 @@ public class AuthService
     private readonly UserProfileRepository _userProfileRepository;
     private readonly AddressRepository _addressRepository;
     private readonly UserManager<IdentityUser> _userManager;
+    private readonly SignInManager<IdentityUser> _signInManager;
 
-    public AuthService(UserProfileRepository userProfileRepository, AddressRepository addressRepository, UserManager<IdentityUser> userManager)
+    public AuthService(UserProfileRepository userProfileRepository, AddressRepository addressRepository, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
     {
         _userProfileRepository = userProfileRepository;
         _addressRepository = addressRepository;
         _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     public async Task<bool> RegisterAsync(AuthenticationRegistrationModel model)
@@ -45,5 +50,27 @@ public class AuthService
         } catch { }
 
         return false;
+    }
+
+    public async Task<string> LoginAsync(AuthenticationLoginModel model)
+    {
+        var identityUser = await _userManager.FindByEmailAsync(model.Email);
+        if (identityUser != null)
+        {
+            var signInResult = await _signInManager.CheckPasswordSignInAsync(identityUser, model.Password, false);
+            if (signInResult.Succeeded)
+            {
+                var claimsIdentity = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim("id", identityUser.Id.ToString()),
+                    new Claim(ClaimTypes.Name, identityUser.Email!)
+                });
+
+                return JwtToken.Generate(claimsIdentity, DateTime.Now.AddHours(1), "582d128a-d1ae-43f9-a521-51712709f178");
+            }
+
+        }
+
+        return string.Empty;
     }
 }

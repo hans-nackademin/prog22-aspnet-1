@@ -27,4 +27,19 @@ public class AuthenticationController : ControllerBase
 
         return BadRequest();
     }
+
+
+    [Route("Login")]
+    [HttpPost]
+    public async Task<IActionResult> Login(AuthenticationLoginModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            var token = await _auth.LoginAsync(model);
+            if (!string.IsNullOrEmpty(token))
+                return Ok(token);
+        }
+
+        return Unauthorized("Incorrect email or password");
+    }
 }
