@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Models.Dtos;
 using WebApi.Models.Identity;
 
@@ -19,7 +20,7 @@ public class AuthenticationService
 
     public async Task<bool> FindUserAsync(AppUser user)
     {
-        return !string.IsNullOrEmpty(await _userManager.GetUserNameAsync(user));
+        return await _userManager.Users.AnyAsync(x => x.Email == user.Email);
     }
 
     public async Task<bool> RegisterAsync(UserRegistrationModel model)
@@ -29,7 +30,7 @@ public class AuthenticationService
         var result = await _userManager.CreateAsync(user, model.Password);
         if (result.Succeeded)
         {
-            await _userManager.AddToRoleAsync(user, "user");
+            //await _userManager.AddToRoleAsync(user, "user");
 
             var address = await _addressService.GetOrCreateAsync(model);
             await _addressService.AddAddressAsync(user, address);
@@ -38,5 +39,15 @@ public class AuthenticationService
         }
 
         return false;
+    }
+
+    public async Task<string> LoginAsync(UserLoginModel model)
+    {
+        var userEntity = await _userManager.Users.FirstOrDefaultAsync(x => x.Email == model.Email);
+        if (userEntity != null)
+            if (await _userManager.CheckPasswordAsync(userEntity, model.Password))
+                return TokenGenerator.Generate(await _userManager.GetClaimsAsync(model), DateTime.Now.AddHours(1));
+
+        return null!;
     }
 }

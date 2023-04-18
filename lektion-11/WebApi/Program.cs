@@ -4,12 +4,19 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebApi.Contexts;
+using WebApi.Helpers.Repositories;
+using WebApi.Helpers.Services;
 using WebApi.Models.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<AddressRepository>();
+builder.Services.AddScoped<UserAddressRepository>();
+builder.Services.AddScoped<AddressService>();
+builder.Services.AddScoped<AuthenticationService>();
 
 builder.Services.AddDbContext<IdentityContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Identity")));
 builder.Services.AddIdentity<AppUser, IdentityRole>(x =>
@@ -31,8 +38,8 @@ builder.Services.AddAuthentication(x =>
     {
         OnTokenValidated = context =>
         {
-            if (string.IsNullOrEmpty(context?.Principal?.Identity?.Name))
-                context?.Fail("Unauthorized");
+            //if (string.IsNullOrEmpty(context?.Principal?.Identity?.Name))
+            //    context?.Fail("Unauthorized");
 
             return Task.CompletedTask;
         }

@@ -83,3 +83,4 @@ C:\Users\hans\source\repos\WebApi\obj\Debug\net7.0\refint\WebApi.dll
 C:\Users\hans\source\repos\WebApi\obj\Debug\net7.0\WebApi.pdb
 C:\Users\hans\source\repos\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 C:\Users\hans\source\repos\WebApi\obj\Debug\net7.0\ref\WebApi.dll
+C:\Users\hans\source\repos\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
