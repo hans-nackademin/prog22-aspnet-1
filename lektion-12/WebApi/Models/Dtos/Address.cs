@@ -1,0 +1,14 @@
+﻿using WebApi.Models.Interfaces;
+
+namespace WebApi.Models.Dtos
+{
+
+    public class Address : IAddress
+    {
+        public int Id { get; set; }
+        public string? AddressLine_1 { get; set; }
+        public string? AddressLine_2 { get; set; }
+        public string? PostalCode { get; set; }
+        public string? City { get; set; }
+    }
+}

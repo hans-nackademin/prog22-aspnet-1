@@ -1,11 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.Linq.Expressions;
 using WebApi.Contexts;
 
-namespace WebApi.Helpers.Repositories
+namespace WebApi.Helpers.Repositories.Base
 {
-    public class Repository<TEntity> where TEntity : class
+    public abstract class Repository<TEntity> where TEntity : class
     {
         private readonly DataContext _context;
 
@@ -22,7 +21,8 @@ namespace WebApi.Helpers.Repositories
                 _context.Set<TEntity>().Add(entity);
                 await _context.SaveChangesAsync();
                 return entity;
-            } catch { return null!; }
+            }
+            catch { return null!; }
         }
 
         public virtual async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression)
@@ -32,7 +32,8 @@ namespace WebApi.Helpers.Repositories
                 var entity = await _context.Set<TEntity>().FirstOrDefaultAsync(expression);
                 return entity!;
 
-            } catch { }
+            }
+            catch { }
 
             return null!;
         }
@@ -51,7 +52,8 @@ namespace WebApi.Helpers.Repositories
             try
             {
                 return await _context.Set<TEntity>().Where(expression).ToListAsync();
-            } catch { return new List<TEntity>(); }
+            }
+            catch { return new List<TEntity>(); }
         }
 
         public virtual async Task<TEntity> UpdateAsync(TEntity entity)
@@ -61,7 +63,8 @@ namespace WebApi.Helpers.Repositories
                 _context.Set<TEntity>().Update(entity);
                 await _context.SaveChangesAsync();
                 return entity;
-            } catch { return null!; }
+            }
+            catch { return null!; }
         }
 
         public virtual async Task<bool> DeleteAsync(TEntity entity)
@@ -72,7 +75,8 @@ namespace WebApi.Helpers.Repositories
                 await _context.SaveChangesAsync();
                 return true;
 
-            } catch { return false; }
+            }
+            catch { return false; }
         }
     }
 }

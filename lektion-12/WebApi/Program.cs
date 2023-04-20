@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Contexts;
+using WebApi.Helpers.Repositories;
+using WebApi.Helpers.Services;
+using WebApi.Models.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -10,13 +13,23 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Merketo")));
 
 // Repositories
-
+builder.Services.AddScoped<AddressRepository>();
+builder.Services.AddScoped<UserAddressRepository>();
+builder.Services.AddScoped<CompanyRepository>();
+builder.Services.AddScoped<UserCompanyRepository>();
 
 // Services
-
+builder.Services.AddScoped<AddressManager>();
+builder.Services.AddScoped<AuthManager>();
+builder.Services.AddScoped<CompanyManager>();
 
 // Authentication/Identity
-
+builder.Services.AddDefaultIdentity<CustomIdentityUser>(x =>
+{
+    x.User.RequireUniqueEmail = true;
+    x.SignIn.RequireConfirmedAccount = false;
+    x.Password.RequiredLength = 8;
+}).AddEntityFrameworkStores<DataContext>();
 
 
 var app = builder.Build();

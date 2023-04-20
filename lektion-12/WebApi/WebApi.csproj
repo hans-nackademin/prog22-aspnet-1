@@ -19,12 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Helpers\Filters\" />
-    <Folder Include="Helpers\Services\" />
-    <Folder Include="Helpers\Repositories\" />
-    <Folder Include="Models\Dtos\" />
-    <Folder Include="Models\Interfaces\" />
   </ItemGroup>
 
 </Project>

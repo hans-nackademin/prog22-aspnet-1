@@ -11,5 +11,7 @@ namespace WebApi.Models.Identity
 
         public ICollection<UserAddressEntity> UserAddresses { get; set; } = new HashSet<UserAddressEntity>();
         public ICollection<UserCompanyEntity> UserCompanies { get; set; } = new HashSet<UserCompanyEntity>();
+    
+    
     }
 }
